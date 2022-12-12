@@ -1,0 +1,14 @@
+prefix=/Users/yxibng/Github/ffmpeg/ffmpeg-macos/arm64
+exec_prefix=${prefix}
+libdir=/Users/yxibng/Github/ffmpeg/ffmpeg-macos/arm64/lib
+includedir=/Users/yxibng/Github/ffmpeg/ffmpeg-macos/arm64/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 8.49.101
+Requires: libswscale >= 6.8.112, libavformat >= 59.34.101, libavcodec >= 59.51.100, libswresample >= 4.9.100, libavutil >= 57.39.101
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -framework OpenGL -framework OpenGL -pthread -lm -framework Metal -framework VideoToolbox -framework CoreImage -framework AppKit -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Libs.private: 
+Cflags: -I${includedir}

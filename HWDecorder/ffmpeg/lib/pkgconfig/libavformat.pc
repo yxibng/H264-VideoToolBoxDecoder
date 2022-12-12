@@ -1,0 +1,14 @@
+prefix=/Users/yxibng/Github/ffmpeg/ffmpeg-macos/arm64
+exec_prefix=${prefix}
+libdir=/Users/yxibng/Github/ffmpeg/ffmpeg-macos/arm64/lib
+includedir=/Users/yxibng/Github/ffmpeg/ffmpeg-macos/arm64/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 59.34.101
+Requires: libavcodec >= 59.51.100, libswresample >= 4.9.100, libavutil >= 57.39.101
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavformat -lm -lbz2 -lz -Wl,-framework,CoreFoundation -Wl,-framework,Security
+Libs.private: 
+Cflags: -I${includedir}
